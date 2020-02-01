@@ -57,8 +57,10 @@ function game() {
       return guesses();
     }
     if (guessedNumber === randomNumber){
-      alert('угадано');
-      return true;
+      if(confirm('угадано. Хотите сыграть еще?')){
+        return game();
+      }
+      return alert('game over');
     }
 	
 };
